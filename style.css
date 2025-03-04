@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pacifico&display=swap");
+
+* {
+  margin: 0;
+}
+.container {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  color: white;
+  font-size: 24px;
+  background: linear-gradient(45deg, rgb(201, 100, 255), rgb(255, 100, 175));
+  background-size: 400% 400%;
+  animation: gradientMove 3s infinite alternate ease-in-out;
+  transition: background 5s ease-in-out;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes dance {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(0) rotate(2deg);
+  }
+  75% {
+    transform: translateY(10px) rotate(-2deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+.dancing-text {
+  animation: dance 4s infinite ease-in-out;
+}
+.dancing-text span {
+  font-size: 80px;
+}
+.dancing-text p {
+  font-family: Pacifico;
+  font-size: 60px;
+  color: #f0fb9e;
+  font-weight: 500;
+}
+.footer {
+  width: 200px;
+  font-size: 20px;
+  position: absolute;
+  top: 90%;
+  left: 4%;
+}
+.footer p {
+  font-family: Pacifico;
+  color: #ffffff;
+}
+.falling-flowers {
+  position: absolute;
+  top: -10%;
+  width: 100%;
+  height: 100%;
+}
+
+.flower {
+  position: absolute;
+  font-size: 2em;
+  animation: fall 5s infinite ease-in;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+.flower:nth-child(1) {
+  left: 10%;
+  animation-duration: 6s;
+  animation-delay: 0s;
+}
+
+.flower:nth-child(2) {
+  left: 20%;
+  animation-duration: 7s;
+  animation-delay: 1s;
+}
+
+.flower:nth-child(3) {
+  left: 30%;
+  animation-duration: 5s;
+  animation-delay: 2s;
+}
+
+.flower:nth-child(4) {
+  left: 40%;
+  animation-duration: 6s;
+  animation-delay: 3s;
+}
+
+.flower:nth-child(5) {
+  left: 50%;
+  animation-duration: 7s;
+  animation-delay: 4s;
+}
+
+.flower:nth-child(6) {
+  left: 60%;
+  animation-duration: 5s;
+  animation-delay: 5s;
+}
+
+.flower:nth-child(7) {
+  left: 70%;
+  animation-duration: 6s;
+  animation-delay: 6s;
+}
+
+@media (max-width: 1230px) {
+  .dancing-text span {
+    font-size: 70px;
+  }
+  .dancing-text p {
+    font-size: 50px;
+  }
+}
+@media (max-width: 1030px) {
+  .dancing-text span {
+    font-size: 60px;
+  }
+  .dancing-text p {
+    font-size: 40px;
+  }
+}
+@media (max-width: 850px) {
+  .dancing-text span {
+    font-size: 50px;
+  }
+  .dancing-text p {
+    font-size: 30px;
+  }
+}
+@media (max-width: 630px) {
+  .dancing-text span {
+    font-size: 70px;
+  }
+  .dancing-text p {
+    font-size: 50px;
+  }
+  .dancing-text {
+    width: 400px;
+  }
+}
+
+@media (max-width: 430px) {
+  .dancing-text span {
+    font-size: 40px;
+  }
+  .dancing-text p {
+    font-size: 30px;
+  }
+  .dancing-text {
+    width: 240px;
+  }
+}
